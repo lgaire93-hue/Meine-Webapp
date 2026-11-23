@@ -1,0 +1,70 @@
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+:root {
+  --page-background: #edf2f8;
+  --card-background: #ffffff;
+  --page-text: #1b2940;
+  --card-border: #c7d3e3;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page-background: #101827;
+  --card-background: #1d293d;
+  --page-text: #f2f5fb;
+  --card-border: #4b5d78;
+}
+
+body {
+  margin: 0;
+  background: var(--page-background);
+  color: var(--page-text);
+  font-family: system-ui, sans-serif;
+}
+
+.personal-page {
+  box-sizing: border-box;
+  width: min(42rem, calc(100% - 2rem));
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  background: var(--card-background);
+}
+
+.personal-page h1 {
+  margin-top: 0;
+}
+
+.personal-page form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.personal-page button {
+  justify-self: start;
+}
+
+.task-list {
+  padding: 0;
+  list-style: none;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
